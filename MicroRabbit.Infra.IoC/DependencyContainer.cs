@@ -23,10 +23,10 @@ public static class DependencyContainer
 
         serviceCollection.AddTransient<IRequestHandler<CreateTransferCommand ,bool>, TransferCommandHandler>();
         //Application Service
-        serviceCollection.AddTransient<IAccountService, AccountService>();
+        serviceCollection.AddScoped<IAccountService, AccountService>();
         
         //Repository Service
-        serviceCollection.AddTransient<IAccountRepository,AccountRepository>();
+        serviceCollection.AddScoped<IAccountRepository,AccountRepository>();
         serviceCollection.AddSingleton(typeof(Dictionary<string, List<Type>>));
         serviceCollection.AddSingleton(typeof(List<Type>));
 

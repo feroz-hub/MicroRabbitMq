@@ -4,10 +4,10 @@ using MicroRabbit.Banking.Domain.Models;
 
 namespace MicroRabbit.Banking.Data.Repository;
 
-public class AccountRepository(BankingDbContext _dbContext):IAccountRepository
+public class AccountRepository(BankingDbContext dbContext):IAccountRepository
 {
     public IEnumerable<Account> GetAccounts()
     {
-        return _dbContext.Accounts;
+        return dbContext.Accounts;
     }
 }
