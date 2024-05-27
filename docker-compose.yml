@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+  microrabbit.banking.api:
+    image: ${DOCKER_REGISTRY-}microrabbitbankingapi
+    build:
+      context: .
+      dockerfile: MicroRabbit.Banking.Api/Dockerfile
+
+  microrabbit.transfer.api:
+    image: ${DOCKER_REGISTRY-}microrabbittransferapi
+    build:
+      context: .
+      dockerfile: MicroRabbit.Transfer.Api/Dockerfile
+
