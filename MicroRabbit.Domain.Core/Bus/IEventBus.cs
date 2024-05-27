@@ -1,7 +1,3 @@
-using System.Data;
-using MicroRabbit.Domain.Core.Commands;
-using MicroRabbit.Domain.Core.Events;
-
 namespace MicroRabbit.Domain.Core.Bus;
 
 public interface IEventBus
